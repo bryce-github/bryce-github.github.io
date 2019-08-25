@@ -21,6 +21,13 @@ var goalData = [
   },
 ];
 
+var userData = document.cookie ? JSON.parse(document.cookie) : [];
+document.cookie = JSON.stringify(userData)
+
+function generateUserChart() {
+
+}
+
 var userData = [
   {
     x: moment('00:00:00', 'HH:mm:ss'),
@@ -90,20 +97,30 @@ var myChart = new Chart(ctx, {
       fill: false,
       label: "goal",
       pointRadius: 0,
-      pointHitRadius: 0
+      pointHitRadius: 0,
+      borderWidth: 5
     }, {
       data: userData,
       lineTension: 0,
       fill: false,
       label: "goal",
       pointRadius: 0,
-      pointHitRadius: 0
+      pointHitRadius: 0,
+      borderWidth: 5
     }]
   },
   options: {
     scales: {
       xAxes: [{
-          type: 'time'
+          type: 'time',
+          ticks: {
+            fontSize: 18
+          }
+      }],
+      yAxes: [{
+        ticks: {
+          fontSize: 18
+        }
       }]
     },
     annotation: {
