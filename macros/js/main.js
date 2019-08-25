@@ -1,37 +1,34 @@
 var ctx = document.getElementById('dailyProteinChart').getContext('2d');
 var myChart = new Chart(ctx, {
-    type: 'bar',
-    data: {
-        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-        datasets: [{
-            label: '# of Votes',
-            data: [12, 19, 3, 5, 2, 3],
-            backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
-            ],
-            borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
-            ],
-            borderWidth: 1
-        }]
-    },
-    options: {
-        scales: {
-            yAxes: [{
-                ticks: {
-                    beginAtZero: true
-                }
-            }]
+  type: 'line',
+  data: {
+    labels: ['12:00AM', '1:00AM', '2:00AM', '3:00AM', '4:00AM', '5:00AM', '6:00AM',
+      '7:00AM', '8:00AM', '9:00AM', '10:00AM', '11:00AM', '12:00PM',
+      '1:00PM', '2:00PM', '3:00PM', '4:00PM', '5:00PM', '6:00PM',
+      '7:00PM', '8:00PM', '9:00PM', '10:00PM', '11:00PM', '12:00PM'
+    ],
+    datasets: [{
+      data: [0, 0, 0, 0, 0, 0, 0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100],
+      label: "Goal"
+    }, {
+      data: [0, 0, 0, 0, 0, 0, 25, 25, 25, 60, 60, 70, 70, 100, 100, 100],
+      label: "Achieved"
+    }]
+  },
+  options: {
+    annotation: {
+      annotations: [{
+        type: "line",
+        mode: "vertical",
+        scaleID: "x-axis-0",
+        value: "MAR",
+        borderColor: "red",
+        label: {
+          content: "TODAY",
+          enabled: true,
+          position: "top"
         }
+      }]
     }
+  }
 });
