@@ -24,10 +24,6 @@ var goalData = [
 var userData = document.cookie ? JSON.parse(document.cookie) : [];
 document.cookie = JSON.stringify(userData)
 
-function generateUserChart() {
-
-}
-
 var userData = [
   {
     x: moment('00:00:00', 'HH:mm:ss'),
@@ -66,24 +62,8 @@ var userData = [
     y: 113
   },
   {
-    x: moment('17:52:00', 'HH:mm:ss'),
-    y: 113
-  },
-  {
-    x: moment('17:58:00', 'HH:mm:ss'),
-    y: 146
-  },
-  {
-    x: moment('19:58:00', 'HH:mm:ss'),
-    y: 146
-  },
-  {
-    x: moment('20:03:00', 'HH:mm:ss'),
-    y: 196
-  },
-  {
     x: moment(),
-    y: 196
+    y: 113
   },
 ];
 
@@ -138,8 +118,10 @@ var myChart = new Chart(ctx, {
   }
 });
 
+
 window.setInterval(function() {
   myChart.options.annotation.annotations[0].value = moment().format();
   myChart.datasets[1].data[myChart.datasets[1].data.length].x = moment();
   myChart.update();
-}, 10000);
+  Push.create('Hello World!')
+}, 30000);
