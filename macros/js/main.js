@@ -8,10 +8,12 @@ var myChart = new Chart(ctx, {
       '7:00PM', '8:00PM', '9:00PM', '10:00PM', '11:00PM', '12:00PM'
     ],
     datasets: [{
-      data: [0, 0, 0, 0, 0, 0, 0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100],
+      data: [0, 0, 0, 0, 0, 0, 0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100,
+             110, 120, 130, 140, 150, 160, 170, 180],
       label: "Goal"
     }, {
-      data: [0, 0, 0, 0, 0, 0, 25, 25, 25, 60, 60, 70, 70, 100, 100, 100],
+      data: [0, 0, 0, 0, 0, 0, 25, 25, 25, 60, 60, 70, 70, 100, 100, 100,
+             100, 100, 100, 100, 100, 100, 100, 100, 100],
       label: "Achieved"
     }]
   },
@@ -21,7 +23,7 @@ var myChart = new Chart(ctx, {
         type: "line",
         mode: "vertical",
         scaleID: "x-axis-0",
-        value: "MAR",
+        value: "7:00AM",
         borderColor: "red",
         label: {
           content: "TODAY",
