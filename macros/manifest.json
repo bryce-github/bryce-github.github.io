@@ -1,6 +1,6 @@
 {
-    "short_name": "Chat",
-    "name": "Chat",
+    "short_name": "Macros",
+    "name": "Macros",
     "icons": [
     {
     "src":"/img/logo.png",
@@ -8,7 +8,7 @@
     "type": "image/png"
     }
     ],
-    "start_url": "/?utm_source=homescreen",
+    "start_url": "/",
     "background_color": "#e05a47",
     "theme_color": "#e05a47",
     "display": "standalone"
