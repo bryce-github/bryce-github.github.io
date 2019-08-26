@@ -147,7 +147,7 @@ var myChart = new Chart(ctx, {
 
 window.setInterval(function() {
   myChart.options.annotation.annotations[0].value = moment().format();
-  myChart.datasets[1].data[myChart.datasets[1].data.length].x = moment();
+  myChart.data.datasets[1].data[myChart.datasets[1].data.length].x = moment();
   myChart.update();
   Push.create('Hello World!')
 }, 30000);
