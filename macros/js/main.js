@@ -13,9 +13,8 @@ if ('serviceWorker' in navigator) {
   } else {
   console.log('service worker is not supported');
   }
-  </script>
-// service-worker.js
-self.addEventListener('install', function() {
+
+  self.addEventListener('install', function() {
   console.log('Install!');
 });
 self.addEventListener("activate", event => {
