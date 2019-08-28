@@ -108,12 +108,12 @@ var myChart = new Chart(ctx, {
       xAxes: [{
           type: 'time',
           ticks: {
-            fontSize: 18
+            fontSize: 12
           }
       }],
       yAxes: [{
         ticks: {
-          fontSize: 18
+          fontSize: 12
         }
       }]
     },
