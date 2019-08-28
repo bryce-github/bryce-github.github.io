@@ -1,12 +1,28 @@
 <head>
   <title>Macro Tracker</title>
-  <link rel="manifest" href="manifest.json">
+  <!-- Link manifest file -->
+  <link rel="manifest" href="./manifest.json">
+  <!-- Link stylesheets -->
+  <link rel="stylesheet" href="./css/font-awesome.min.css">
+  <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
-  <canvas id="dailyProteinChart"></canvas>
-  <script src="js/moment.min.js"></script>
-  <script src="js/Chart.min.js"></script>
-  <script src="js/chartjs-plugin-annotation.js"></script>
-  <script src="js/push.min.js"></script>
-  <script src="js/main.js"></script>
+  <div id="top-nav">
+    <p>Macro Track</p>
+  </div>
+
+  <div id="main">
+      <canvas id="chart"></canvas>
+  </div>
+  
+  <nav id="bottom-nav">
+    <a href="#">Home</a>
+    <a href="#">Settings</a>
+  </nav>
+  <!-- Add JavaScript scripts -->
+  <script src="./js/moment.min.js"></script>
+  <script src="./js/Chart.min.js"></script>
+  <script src="./js/chartjs-plugin-annotation.js"></script>
+  <script src="./js/push.min.js"></script>
+  <script src="./js/main.js"></script>
 </body>

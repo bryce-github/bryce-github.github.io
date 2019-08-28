@@ -1,27 +1,12 @@
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', function() {
-  navigator.serviceWorker.register('service-worker.js').then(function(registration) {
-  // Registration was successful
-  console.log('Registered!');
-  }, function(err) {
-  // registration failed :(
-  console.log('ServiceWorker registration failed: ', err);
-  }).catch(function(err) {
-  console.log(err);
-  });
-  });
-  } else {
-  console.log('service worker is not supported');
+window.addEventListener('load', event => {
+  if ('serviceWorker' in navigator) {
+    try {
+      navigator.serviceWorker.register('service-worker.js');
+      console.log('service worker registered!')
+    } catch (error) {
+      console.log('service worker failed.')
+    }
   }
-
-  self.addEventListener('install', function() {
-  console.log('Install!');
-});
-self.addEventListener("activate", event => {
-  console.log('Activate!');
-});
-self.addEventListener('fetch', function(event) {
-  console.log('Fetch!', event.request);
 });
 
 var startTime = moment('07:00:00', 'HH:mm:ss');
@@ -93,7 +78,7 @@ var userData = [
   },
 ];
 
-var ctx = document.getElementById('dailyProteinChart').getContext('2d');
+var ctx = document.getElementById('chart').getContext('2d');
 var myChart = new Chart(ctx, {
   type: 'line',
   data: {
@@ -116,6 +101,9 @@ var myChart = new Chart(ctx, {
     }]
   },
   options: {
+    legend: {
+      display: false
+    },
     scales: {
       xAxes: [{
           type: 'time',
@@ -136,7 +124,7 @@ var myChart = new Chart(ctx, {
           mode: "vertical",
           scaleID: "x-axis-0",
           value: moment().format(),
-          borderColor: "red",
+          borderColor: "#0065ad",
           label: "now"
         }
       ]
@@ -149,5 +137,4 @@ window.setInterval(function() {
   myChart.options.annotation.annotations[0].value = moment().format();
   myChart.data.datasets[1].data[myChart.data.datasets[1].data.length].x = moment();
   myChart.update();
-  Push.create('Hello World!')
 }, 30000);
