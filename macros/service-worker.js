@@ -1,12 +1,10 @@
 const staticAssets = [
     './index.html',
     './css/main.css',
-    './css/font-awesome.min.css',
     './js/Chart.min.js',
     './js/chartjs-plugin-annotation.js',
     './js/main.js',
-    './js/moment.min.js',
-    './js/push.min.js',
+    './js/moment.min.js'
 ]
 
 self.addEventListener('install', async event => {
