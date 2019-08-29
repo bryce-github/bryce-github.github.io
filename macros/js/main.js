@@ -165,4 +165,4 @@ window.setInterval(function() {
   myChart.options.annotation.annotations[0].value = moment().format();
   myChart.data.datasets[1].data[myChart.data.datasets[1].data.length].x = moment();
   myChart.update();
-}, 30000);
+}, 60000);
