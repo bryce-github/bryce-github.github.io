@@ -12,12 +12,26 @@ self.addEventListener('install', async event => {
     cache.addAll(staticAssets);
 });
 
-self.addEventListener('fetch', event => {
-    const req = event.request;
-    event.respondWith(cacheFirst(req));
+self.addEventListener('fetch', function (event) {
+    event.respondWith(
+        caches.open('macros-static').then(function (cache) {
+            return fetch(event.request).then(function (response) {
+                cache.put(event.request, response.clone());
+                return response;
+            });
+        })
+    );
 });
 
-async function cacheFirst(req) {
-    const cachedResponse = await caches.match(req);
-    return cachedResponse || fetch(req);
-}
+self.addEventListener('activate', function(event) {
+    event.waitUntil(
+      caches.keys().then(function(cacheNames) {
+        return Promise.all(
+          cacheNames.filter(function(cacheName) {
+          }).map(function(cacheName) {
+            return caches.delete(cacheName);
+          })
+        );
+      })
+    );
+  });
