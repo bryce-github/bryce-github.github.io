@@ -21,4 +21,3 @@ async function cacheFirst(req) {
     const cachedResponse = await caches.match(req);
     return cachedResponse || fetch(req);
 }
-

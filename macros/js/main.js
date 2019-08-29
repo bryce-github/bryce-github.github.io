@@ -79,11 +79,11 @@ var userData = [
   },
   {
     x: moment('08:45:00', 'HH:mm:ss'),
-    y: 62
+    y: 63
   },
   {
     x: moment('11:47:00', 'HH:mm:ss'),
-    y: 62
+    y: 63
   },
   {
     x: moment('11:52:00', 'HH:mm:ss'),
