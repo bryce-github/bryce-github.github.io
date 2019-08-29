@@ -9,6 +9,31 @@ window.addEventListener('load', event => {
   }
 });
 
+Notification.requestPermission(function(status) {
+  console.log('Notification permission status:', status);
+});
+
+function displayNotification() {
+  if (Notification.permission == 'granted') {
+    navigator.serviceWorker.getRegistration().then(function(reg) {
+      var options = {
+        body: 'Here is a notification body!',
+        icon: './img/icons/icon-72x72.png',
+        vibrate: [100, 50, 100],
+        data: {
+          dateOfArrival: Date.now(),
+          primaryKey: 1
+        }
+      };
+      reg.showNotification('Hello world!', options);
+    });
+  }
+}
+
+document.querySelector('#push').addEventListener('click', function( event ) {
+  displayNotification()
+});
+
 var startTime = moment('07:00:00', 'HH:mm:ss');
 var endTime = moment('22:00:00', 'HH:mm:ss');
 var goalAmount = 200;
