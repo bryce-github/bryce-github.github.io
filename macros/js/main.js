@@ -1,30 +1,3 @@
-window.isUpdateAvailable = new Promise(function(resolve, reject) {
-	// lazy way of disabling service workers while developing
-	if ('serviceWorker' in navigator && ['localhost', '127'].indexOf(location.hostname) === -1) {
-		// register service worker file
-		navigator.serviceWorker.register('service-worker.js')
-			.then(reg => {
-				reg.onupdatefound = () => {
-					const installingWorker = reg.installing;
-					installingWorker.onstatechange = () => {
-						switch (installingWorker.state) {
-							case 'installed':
-								if (navigator.serviceWorker.controller) {
-									// new update available
-									resolve(true);
-								} else {
-									// no update available
-									resolve(false);
-								}
-								break;
-						}
-					};
-				};
-			})
-			.catch(err => console.error('[SW ERROR]', err));
-	}
-});
-
 window.addEventListener('load', event => {
   if ('serviceWorker' in navigator) {
     try {
@@ -36,11 +9,11 @@ window.addEventListener('load', event => {
   }
 });
 
-Notification.requestPermission(function(status) {
-  console.log('Notification permission status:', status);
-});
-
 function displayNotification(message) {
+  if (Notification.permission == 'default') {
+    Notification.requestPermission()
+  }
+
   if (Notification.permission == 'granted') {
     navigator.serviceWorker.getRegistration().then(function(reg) {
       var options = {
@@ -56,13 +29,6 @@ function displayNotification(message) {
     });
   }
 }
-
-window['isUpdateAvailable']
-	.then(isAvailable => {
-		if (isAvailable) {
-			displayNotification('update available!')
-		}
-	});
 
 document.querySelector('#push').addEventListener('click', function( event ) {
   displayNotification()
