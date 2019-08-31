@@ -6,34 +6,37 @@
   <link rel="shortcut icon" href="./img/icons/icon-72x72.png" />
   <link rel="apple-touch-icon" href="./img/icons/icon-192x192.png" />
 </head>
+
 <body>
   <div class="nav">
     <p class="title nav-content">Macro Track</p>
     <p class="menu-btn nav-content">&#9776;</p>
   </div>
   <div id="main">
-      <div id="time-div">
-          <table class="time-tbl">
-              <tr>
-                <td id="tbl-sml"><button class="bck-btn">&#8249;</td>
-                <td id="tbl-lrg"><p class="time">Sat Aug 31</td>
-                <td id="tbl-sml"><button class="fwd-btn">&#8250;</td>
-              </tr>
-            </table>
-      </div>  
-      <div id="chart-div">
-          <canvas class="chart" id='chart'></canvas>
-      </div>
-      <div id="entry-div">
-          <button class="entry-btn">Add entry</button>
-        <table class="entry-tbl">
-          <tr>
-            <td><input type="number" name="amount"></td>
-            <td><input type="time" name="time"></td>
-          </tr>
-        </table>
-      </div>
+    <div id="time-div">
+      <table class="time-tbl">
+        <tr>
+          <td id="tbl-sml"><button class="bck-btn">&#8249;</td>
+          <td id="tbl-lrg">
+            <p class="time">Sat Aug 31
+          </td>
+          <td id="tbl-sml"><button class="fwd-btn">&#8250;</td>
+        </tr>
+      </table>
     </div>
+    <div id="chart-div">
+      <canvas class="chart" id='chart'></canvas>
+    </div>
+    <div id="entry-div">
+      <button class="entry-btn">Add entry</button>
+      <table class="entry-tbl">
+        <tr>
+          <td><input type="number" name="amount"></td>
+          <td><input type="time" name="time"></td>
+        </tr>
+      </table>
+    </div>
+  </div>
   <button type="button" id="push">Test Push</button>
 
   <!-- Add JavaScript scripts -->

@@ -12,7 +12,7 @@ window.addEventListener('load', event => {
 
 function displayNotification(title, body) {
   if (Notification.permission == 'granted') {
-    navigator.serviceWorker.getRegistration().then(function(reg) {
+    navigator.serviceWorker.getRegistration().then(function (reg) {
       var options = {
         body: body,
         icon: './img/icons/icon-72x72.png',
@@ -21,11 +21,16 @@ function displayNotification(title, body) {
           dateOfArrival: Date.now(),
           primaryKey: 1
         },
-        actions: [
-          {action: 'explore', title: 'Explore this new world',
-            icon: './img/icons/icon-72x72.png'},
-          {action: 'close', title: 'Close notification',
-            icon: './img/icons/icon-72x72.png'},
+        actions: [{
+            action: 'explore',
+            title: 'Explore this new world',
+            icon: './img/icons/icon-72x72.png'
+          },
+          {
+            action: 'close',
+            title: 'Close notification',
+            icon: './img/icons/icon-72x72.png'
+          },
         ]
       };
       reg.showNotification(title, options);
@@ -41,8 +46,7 @@ var startTime = moment('07:00:00', 'HH:mm:ss');
 var endTime = moment('22:00:00', 'HH:mm:ss');
 var goalAmount = 200;
 
-var goalData = [
-  {
+var goalData = [{
     x: moment('00:00:00', 'HH:mm:ss'),
     y: 0
   },
@@ -63,8 +67,7 @@ var goalData = [
 var userData = document.cookie ? JSON.parse(document.cookie) : [];
 document.cookie = JSON.stringify(userData)
 
-var userData = [
-  {
+var userData = [{
     x: moment('00:00:00', 'HH:mm:ss'),
     y: 0
   },
@@ -136,10 +139,10 @@ var myChart = new Chart(ctx, {
     },
     scales: {
       xAxes: [{
-          type: 'time',
-          ticks: {
-            fontSize: 12
-          }
+        type: 'time',
+        ticks: {
+          fontSize: 12
+        }
       }],
       yAxes: [{
         ticks: {
@@ -148,29 +151,27 @@ var myChart = new Chart(ctx, {
       }]
     },
     annotation: {
-      annotations: [
-        {
-          type: "line",
-          mode: "vertical",
-          scaleID: "x-axis-0",
-          value: moment().format(),
-          borderColor: "#0065ad",
-          label: "now"
-        }
-      ]
+      annotations: [{
+        type: "line",
+        mode: "vertical",
+        scaleID: "x-axis-0",
+        value: moment().format(),
+        borderColor: "#0065ad",
+        label: "now"
+      }]
     }
   }
 });
 
 
-window.setInterval(function() {
+window.setInterval(function () {
   myChart.options.annotation.annotations[0].value = moment().format();
   myChart.data.datasets[1].data[myChart.data.datasets[1].data.length].x = moment();
   myChart.update();
 }, 60000);
 
 
-document.querySelector('.entry-btn').addEventListener('click', function( event ) {
+document.querySelector('.entry-btn').addEventListener('click', function (event) {
   var row = document.querySelector('.entry-tbl').insertRow(0);
   var cell = row.insertCell();
   cell.innerHTML = '<td><input type="number" name="amount"></td>';
