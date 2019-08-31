@@ -10,11 +10,11 @@ window.addEventListener('load', event => {
 });
 
 
-function displayNotification() {
+function displayNotification(title, body) {
   if (Notification.permission == 'granted') {
     navigator.serviceWorker.getRegistration().then(function(reg) {
       var options = {
-        body: 'Here is a notification body!',
+        body: body,
         icon: './img/icons/icon-72x72.png',
         vibrate: [100, 50, 100],
         data: {
@@ -28,14 +28,14 @@ function displayNotification() {
             icon: './img/icons/icon-72x72.png'},
         ]
       };
-      reg.showNotification('Hello world!', options);
+      reg.showNotification(title, options);
     });
   }
 }
 
-document.querySelector('#push').addEventListener('click', function( event ) {
-  displayNotification()
-});
+// document.querySelector('#push').addEventListener('click', function( event ) {
+//   displayNotification("head", "body")
+// });
 
 var startTime = moment('07:00:00', 'HH:mm:ss');
 var endTime = moment('22:00:00', 'HH:mm:ss');
@@ -129,6 +129,8 @@ var myChart = new Chart(ctx, {
     }]
   },
   options: {
+    maintainAspectRatio: false,
+    responsive: true,
     legend: {
       display: false
     },

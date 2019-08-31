@@ -1,9 +1,6 @@
 body {
     margin: 0;
-}
-
-#main {
-    margin: 10px;
+    background-color: #eeeeee;
 }
 
 .nav {
@@ -33,6 +30,72 @@ body {
     margin-right: 14px;
 }
 
+#time-div {
+    height: 40px;
+    background-color: #ffffff;
+    padding: 0px;
+    border-color: #dddddd;
+    border-width: thin;
+    border-style: solid;
+    margin: 2px;
+    margin-bottom: 0px;
+}
+
+.time {
+    font-family: "Arial Black", Gadget, sans-serif;
+    text-align: center;
+}
+
+.time-tbl {
+    width: 100%;
+    height: 100%;
+}
+
+#tbl-sml {
+    width: 5%;
+}
+
+#tbl-lrg {
+    width: 90%;
+}
+
+.bck-btn {
+    float: left;
+    border: none;
+    width: 100%;
+    background-color: #ffffff;
+    font-size: 28px;
+}
+
+.fwd-btn {
+    float: right;
+    border: none;
+    width: 100%;
+    background-color: #ffffff;
+    font-size: 28px;
+}
+
+#chart-div {
+    height: 50%;
+    background-color: #ffffff;
+    padding: 10px;
+    border-color: #dddddd;
+    border-width: thin;
+    border-style: solid;
+    margin: 2px;
+    margin-bottom: 0px;
+}
+
+#entry-div {
+    background-color: #ffffff;
+    padding: 10px;
+    border-color: #dddddd;
+    border-width: thin;
+    border-style: solid;
+    margin: 2px;
+    margin-bottom: 0px;
+}
+
 .entry-btn {
     background-color: #ffffff;
     border: none;
@@ -52,7 +115,7 @@ body {
 .entry-tbl tr {
     text-align: center;
     vertical-align: middle;
-    height: 30px;
+    height: 40px;
 }
 
 input {
