@@ -179,8 +179,4 @@ document.querySelector('.entry-btn').addEventListener('click', function (event) 
   cell.innerHTML = '<td><input type="time" name="time"></td>';
   var cell = row.insertCell();
   cell.innerHTML = '<td><button class="row-delete">X</td>';
-
-
-  var cell = row.insertCell();
-  cell.innterHTML = '<td><input type="number" name="amount"></td>';
 });

@@ -52,17 +52,19 @@ body {
 }
 
 #tbl-sml {
-    width: 5%;
+    width: 7%;
 }
 
 #tbl-lrg {
-    width: 90%;
+    width: 86%;
 }
 
 .bck-btn {
     float: left;
     border: none;
     width: 100%;
+    height: 100%;
+    padding: none;
     background-color: #ffffff;
     font-size: 28px;
 }
@@ -129,6 +131,7 @@ body {
 
 input {
     border: 0px;
+    background-color: #ffffff;
     width: 100%;
     text-align: center;
     border-bottom: 1px solid #bbbbbb;
