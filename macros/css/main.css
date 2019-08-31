@@ -6,46 +6,58 @@ body {
     margin: 10px;
 }
 
-#top-nav {
+.nav {
     background-color: #0061ad;
     overflow: hidden;
     width: 100%;
 }
 
-#top-nav p {
-    float: left;
+.nav-content {
     display: block;
     color: #ffffff;
     text-align: center;
     padding: 0;
+    text-decoration: none;
+    font-size: 17px;
+    margin: 10px;
+    font-family: "Arial Black", Gadget, sans-serif;
+}
+
+.title {
+    float: left;
     margin-left: 14px;
-    text-decoration: none;
-    font-size: 17px;
-    font-family: "Arial Black", Gadget, sans-serif;
 }
 
-#bottom-nav {
-    background-color: #0061ad;
-    overflow: hidden;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
+.menu-btn {
+    float: right;
+    margin-right: 14px;
 }
 
-#bottom-nav a {
-    display: block;
-    color: #ffffff;
+.entry-btn {
+    background-color: #ffffff;
+    border: none;
+    color: #0061ad;
     text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
     width: 100%;
-    font-family: "Arial Black", Gadget, sans-serif;
 }
 
-#bottom-nav a:hover {
-    background-color: #ddd;
-    color: black;
-  }
+.entry-tbl {
+    width: 100%;
+}
+
+.entry-tbl td {
+    width: 50%;
+}
+
+.entry-tbl tr {
+    text-align: center;
+    vertical-align: middle;
+    height: 30px;
+}
+
+input {
+    border: 0px;
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid #bbbbbb;
+}

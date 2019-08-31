@@ -1,52 +1,28 @@
 <head>
   <title>Macro Tracker</title>
   <meta name="viewport" content="width=device-width, user-scalable=no" />
-
-  <!-- Link manifest file -->
   <link rel="manifest" href="./manifest.json">
-
-  <!-- Link stylesheets -->
-  <link type="text/css" rel="stylesheet" href="./css/main.css">
-
-  <!-- Icon links -->
+  <link rel="stylesheet" href="./css/main.css">
   <link rel="shortcut icon" href="./img/icons/icon-72x72.png" />
   <link rel="apple-touch-icon" href="./img/icons/icon-192x192.png" />
-
-  <!-- Google Adsense -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-  <script>
-    (adsbygoogle = window.adsbygoogle || []).push({
-      google_ad_client: "ca-pub-7769585165012044",
-      enable_page_level_ads: true
-    });
-  </script>
 </head>
 <body>
-  <div id="top-nav">
-    <p>Macro Track</p>
+  <div class="nav">
+    <p class="title nav-content">Macro Track</p>
+    <p class="menu-btn nav-content">&#9776;</p>
   </div>
 
   <div id="main">
-      <canvas id="chart"></canvas>
-      <button id="add-row">Add entry</button>
-      <table id="entries">
+      <canvas class="chart" id='chart'></canvas>
+      <button class="entry-btn">Add entry</button>
+      <table class="entry-tbl">
         <tr>
-          <th>Protein</th>
-          <th>Time</th>
-        </tr>
-        <tr>
-          <td>24</td>
-          <td>8:00am</td>
+          <td><input type="number" name="amount"></td>
+          <td><input type="time" name="time"></td>
         </tr>
       </table>
     </div>
-  
   <button type="button" id="push">Test Push</button>
-
-  <div id="bottom-nav">
-    <a href="#">Home</a>
-    <a href="#">Settings</a>
-  </div>
 
   <!-- Add JavaScript scripts -->
   <script src="./js/moment.min.js"></script>

@@ -166,3 +166,16 @@ window.setInterval(function() {
   myChart.data.datasets[1].data[myChart.data.datasets[1].data.length].x = moment();
   myChart.update();
 }, 60000);
+
+
+document.querySelector('.entry-btn').addEventListener('click', function( event ) {
+  var row = document.querySelector('.entry-tbl').insertRow(0);
+  var cell = row.insertCell();
+  cell.innerHTML = '<td><input type="number" name="amount"></td>';
+  var cell = row.insertCell();
+  cell.innerHTML = '<td><input type="time" name="time"></td>';
+
+
+  var cell = row.insertCell();
+  cell.innterHTML = '<td><input type="number" name="amount"></td>';
+});
