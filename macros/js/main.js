@@ -163,20 +163,23 @@ var myChart = new Chart(ctx, {
   }
 });
 
-
 window.setInterval(function () {
   myChart.options.annotation.annotations[0].value = moment().format();
   myChart.data.datasets[1].data[myChart.data.datasets[1].data.length].x = moment();
   myChart.update();
 }, 60000);
 
-
+var rownum = 1;
 document.querySelector('.entry-btn').addEventListener('click', function (event) {
   var row = document.querySelector('.entry-tbl').insertRow(0);
   var cell = row.insertCell();
   cell.innerHTML = '<td><input type="number" name="amount"></td>';
   var cell = row.insertCell();
   cell.innerHTML = '<td><input type="time" name="time"></td>';
+  cell.children[0].value = moment(new Date()).format('HH:mm');
   var cell = row.insertCell();
   cell.innerHTML = '<td><button class="row-delete">X</td>';
+  document.querySelector('.row-delete').addEventListener('click', function (event) {
+    event.target.parentNode.parentNode.remove();
+  })
 });
