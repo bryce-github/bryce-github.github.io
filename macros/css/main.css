@@ -76,7 +76,7 @@ body {
 }
 
 #chart-div {
-    height: 50%;
+    height: 35%;
     background-color: #ffffff;
     padding: 10px;
     border-color: #dddddd;
@@ -101,6 +101,7 @@ body {
     border: none;
     color: #0061ad;
     text-align: center;
+    font-family: "Arial Black", Gadget, sans-serif;
     width: 100%;
 }
 
@@ -108,8 +109,16 @@ body {
     width: 100%;
 }
 
-.entry-tbl td {
+.entry-tbl tr td {
     width: 50%;
+    padding: 0px;
+}
+
+.row-delete {
+    background-color: #ffffff;
+    border: none;
+    color: #ff0000;
+    font-family: "Arial Black", Gadget, sans-serif;
 }
 
 .entry-tbl tr {
