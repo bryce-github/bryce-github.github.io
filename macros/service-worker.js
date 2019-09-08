@@ -1,11 +1,16 @@
 const staticAssets = [
   './index.html',
   './css/main.css',
-  './js/Chart.min.js',
-  './js/chartjs-plugin-annotation.js',
+  './js/chart.js',
   './js/main.js',
-  './js/moment.min.js',
-  './js/dexie.js'
+  './js/notify.js',
+  './js/table.js',
+  './js/timeline.js',
+  './pkg/Chart.min.js',
+  './pkg/chartjs-plugin-annotation.js',
+  './pkg/dexie.js',
+  './pkg.jquery-3.4.1.min.js',
+  './pkg/moment.min.js',
 ]
 
 self.addEventListener('install', async event => {
