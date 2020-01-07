@@ -2,7 +2,7 @@
 
 <head>
   <title>Bryce Anglin</title>
-  <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+  <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
@@ -13,18 +13,18 @@
     <a href="#education">EDUCATION</a>
     <a href="#experience">EXPERIENCE</a>
     <a href="#qualifications">QUALIFICATIONS</a>
-    <a href="#portfolio">PORTFOLIO</a>
-    <a href="#blog">BLOG</a>
+    <!-- <a href="#portfolio">PORTFOLIO</a>
+    <a href="#blog">BLOG</a> -->
     <a href="#contact">CONTACT</a>
   </nav>
 
   <main>
 
     <div class="section" id="about">
-      <img src="images/avatar.png" alt="Avatar">
+      <img class="avatar" src="images/avatar.jpg" alt="Avatar">
       <div class="new-column"></div>
 
-      <ul>
+      <ul class="no-bullets indent-20">
         <li><h1>Bryce Anglin</h1></li>
         <li>
           <p>
@@ -40,7 +40,7 @@
         </li>
       </ul>
       
-      <p>
+      <!-- <p>
         My initial career trajectory wasn't to become a
         software developer. My early interest in Aeronautics
         led me to an internship with NASA and a degree
@@ -52,7 +52,7 @@
         I find myself leading a variety of software
         development projects and pursuing new opportunities
         for professional growth.
-      </p>
+      </p> -->
     </div>
 
 
@@ -60,14 +60,14 @@
       <h1>Education</h1>
 
       <div class="new-row underline"></div>
-      <h2>Master of Science in Aerospace Engineering</h2>
-      <p>Sept. 2016 - Mar. 2018</p>
+      <h2 class="margin-bottom-0">Master of Science in Aerospace Engineering</h2>
+      <h4 class="margin-bottom-0">Sept. 2016 - Mar. 2018</h4>
       <div class="new-row"></div>
       <h4>University of California, Los Angeles | 3.85 GPA</h4>
 
       <div class="new-row"></div>
-      <h2>Bachelor of Science in Mechanical Engineering</h2>
-      <p>Sept. 2011 - June 2015</p>
+      <h2 class="margin-bottom-0">Bachelor of Science in Mechanical Engineering</h2>
+      <h4 class="margin-bottom-0">Sept. 2011 - June 2015</h4>
       <div class="new-row"></div>
       <h4>University of California, Davis | 3.48 GPA</h4>
 
@@ -78,7 +78,7 @@
 
       <div class="new-row underline"></div>
       <h2>Senior Web & Graphics Software Developer</h2>
-      <p>July 2019 - Present</p>
+      <h4>July 2019 - Present</h4>
       <div class="new-row"></div>
       <h4>The Aerospace Corporation</h4>
       <div class="new-row"></div>
@@ -86,7 +86,7 @@
       <div class="new-row"></div>
       <h3>Responsibilities</h3>
       <div class="new-row"></div>
-      <ul>
+      <ul class="dashed">
         <li>
           Design, develop and maintain software for a 
           variety of engineering applications, including
@@ -103,7 +103,7 @@
       <div class="new-row"></div>
       <h3>Notable Projects</h3>
       <div class="new-row"></div>
-      <ul>
+      <ul class="dashed">
         <li>
           Develop a web-based platform to compute and
           communicate predictive analytics of geospatial
@@ -125,7 +125,7 @@
       </ul>
 
       <h2>Space Systems Engineer</h2>
-      <p>June 2014 - July 2019</p>
+      <h4>June 2014 - July 2019</h4>
       <div class="new-row"></div>
       <h4>The Aerospace Corporation</h4>
       <div class="new-row"></div>
@@ -133,7 +133,7 @@
       <div class="new-row"></div>
       <h3>Responsibilities</h3>
       <div class="new-row"></div>
-      <ul>
+      <ul class="dashed">
         <li>
           Develop large-scale, system-of-system models 
           and tools to conduct mission analysis and 
@@ -151,7 +151,7 @@
       <div class="new-row"></div>
       <h3>Notable Projects</h3>
       <div class="new-row"></div>
-      <ul>
+      <ul class="dashed">
         <li>
           Develop a web-based interface to store collections
           of data, query them for subsets of data, and 
@@ -173,22 +173,72 @@
     </div>
     
     <div class="section" id="qualifications">
-      <h1>Qualifications</h1>
+      <h1 class="width-100">Qualifications</h1>
 
       <div class="new-row underline"></div>
-      <h2>Programming</h2>
-      <p>Python, JavaScript, HTML, CSS, C++</p>
+      <h2 class="width-100">Programming</h2>
+      <div class="new-row"></div>
+
+      <div>
+        <h1 class="centered"><i class="fab fa-python"></i></h1>
+        <p>Python</p>
+      </div>
+      <div>
+        <h1 class="centered"><i class="fab fa-js"></i></h1>
+        <p>JavaScript</p>
+      </div>
+      <div>
+          <h1 class="centered"><i class="fab fa-html5"></i></h1>
+          <p>HTML</p>
+        </div>
+        <div>
+            <h1 class="centered"><i class="fab fa-css3-alt"></i></h1>
+            <p>CSS</p>
+          </div>
+      <div>
+        <h1 class="centered"><i class="fab fa-cuttlefish">++</i></h1>
+        <p>C++</p>
+      </div>
 
       <div class="new-row"></div>
-      <h2>Databases</h2>
-      <p>MongoDB, PostgreSQL, Neo4j</p>
+      <h2 class="width-100">Databases</h2>
+      <div class="new-row"></div>
+
+      <div>
+        <h1 class="centered"><i class="fas fa-database"></i></h1>
+        <p>SQL</p>
+      </div>
+      <div>
+        <h1 class="centered"><i class="fas fa-database"></i></h1>
+        <p>MongoDB</p>
+      </div>
+      <div>
+        <h1 class="centered"><i class="fas fa-database"></i></h1>
+        <p>Neo4j</p>
+      </div>
       
       <div class="new-row"></div>
-      <h2>Project Management</h2>
-      <p>Git, JIRA, Confluence, BitBucket</p>
+      <h2 class="width-100">Project Management</h2>
+      <div class="new-row"></div>
+      <div>
+        <h1 class="centered"><i class="fab fa-github"></i></h1>
+        <p>Git</p>
+      </div>
+      <div>
+        <h1 class="centered"><i class="fab fa-jira"></i></h1>
+        <p>Jira</p>
+      </div>
+      <div>
+        <h1 class="centered"><i class="fab fa-confluence"></i></h1>
+        <p>Confluence</p>
+      </div>
+      <div>
+        <h1 class="centered"><i class="fab fa-bitbucket"></i></h1>
+        <p>BitBucket</p>
+      </div>
     </div>
 
-    <div class="section" id="portfolio">
+    <!-- <div class="section" id="portfolio">
       <h1>Portfolio</h1>
       <div class="new-row underline"></div>
     </div>
@@ -196,12 +246,12 @@
     <div class="section" id="blog">
       <h1>Blog</h1>
       <div class="new-row underline"></div>
-    </div>
+    </div> -->
 
     <div class="section" id="contact">
       <h1>Contact</h1>
       <div class="new-row underline"></div>
-      <ul>
+      <ul class="no-bullets indent-20">
         <li>
           <i class="fas fa-phone-square"></i>
           <span>(530) 848-0845</span>
@@ -229,6 +279,7 @@
       </ul>
     </div>
 
+  <script src="main.js"></script>
   </main>
 
 </body>
