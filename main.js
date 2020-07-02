@@ -1,14 +1,12 @@
-const links = document.querySelectorAll('nav a');
-const sections = document.querySelectorAll('.section');
-
-function changeLinkState() {
-  let index = sections.length;
-
-  while(--index && window.scrollY + 55 < sections[index].offsetTop) {}
-  
-  links.forEach((link) => link.classList.remove('active'));
-  links[index].classList.add('active');
+let navElement, activeNavElement = null;
+const allNavElements = document.querySelectorAll('nav p');
+for ( i = 0; i < allNavElements.length; i++ ) {
+  navElement = allNavElements[i];
+  navElement.addEventListener('click', (e) => {
+    if ( activeNavElement ) {
+      activeNavElement.classList.remove('active');
+    }
+    activeNavElement = e.target;
+    activeNavElement.classList.add('active');
+  });
 }
-
-changeLinkState();
-window.addEventListener('scroll', changeLinkState);

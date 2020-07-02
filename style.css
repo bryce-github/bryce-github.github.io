@@ -1,8 +1,12 @@
 :root {
-  --text-color: rgb(84, 84, 84);
-  --divider-color: rgb(211, 211, 211);
-  --primary-color: rgb(38, 149, 152);
+ --black: #353535;
+ --cyan: #3c6e71;
+ --white: #ffffff;
+ --silver: #d9d9d9;
+ --gray: #284b63;
 }
+
+
 
 html, body {
   font-family: 'Raleway', sans-serif;
@@ -10,81 +14,47 @@ html, body {
   margin: 0;
 }
 
-main { 
-  display: grid;
-  margin: 50px 50px 10px 50px;
-  grid-template-columns: 1fr 240px;
-  grid-template-areas: 
-    "col-left col-right";
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
 }
 
-.col-left {
-  grid-area: col-left;
-  margin-right: 18px;
+header {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border-bottom: 1px solid var(--silver);
 }
 
-.col-right {
-  grid-area: col-right;
-  padding-top: 76px;
+nav {
+  border-bottom: 1px solid var(--silver);
+  display: flex;
+  justify-content: center;
 }
 
-.title {
-  font-size: 32px;
-  font-weight: 600;
-  margin: 2px 0;
+nav p {
+  text-decoration: none;
+  color: var(--black);
+  font-weight: bold;
+  cursor: pointer;
+  margin: 1em 0.5em;
+  font-size: 0.8em;
 }
 
-.subtitle {
-  font-size: 14px;
-  margin: 2px 0;
+nav p.active {
+  border-bottom: 0.1em solid var(--gray);
+  margin-bottom: 0.9em;
 }
 
-.left-border {
-  border-left: 1px solid var(--divider-color);
-  padding-left: 16px;
+main {
 }
 
-.text-body { 
-  font-size: 11px;
-}
-
-ul.dashed {
-  list-style-type: none;
-  padding-left: 20px;
-}
-
-ul.dashed > li {
-  text-indent: -10px;
-  margin: 12px 0;
-}
-
-ul.dashed > li:before {
-  content: "-";
-  padding-right: 2px;
-}
-
-.header-primary {
-  color: var(--primary-color);
-  font-weight: 600;
-  font-size: 18px;
-  margin: 14px 0;
-}
-
-p.header-second {
-  font-weight: 600;
-  font-size: 14px;
-  margin: 2px 0;
-}
-
-p.header-third {
-  font-weight: 400;
-  font-size: 12px;
-  margin: 2px 0;
-}
-
-p.header-fourth {
-  font-weight: 400;
-  font-size: 12px;
-  color: var(--primary-color);
-  margin: 2px 0;
+footer {
+  background-color: var(--gray);
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.8em;
 }
