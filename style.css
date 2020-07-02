@@ -10,7 +10,8 @@
 
 html, body {
   font-family: 'Raleway', sans-serif;
-  color: var(--text-color);
+  background-color: var(--white);
+  color: var(--black);
   margin: 0;
 }
 
@@ -40,6 +41,8 @@ nav p {
   cursor: pointer;
   margin: 1em 0.5em;
   font-size: 0.8em;
+  -webkit-tap-highlight-color: var(--white);
+  -webkit-tap-highlight-color: transparent;
 }
 
 nav p.active {
