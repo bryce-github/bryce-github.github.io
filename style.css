@@ -69,6 +69,17 @@ div#about-container {
   div#about-container {
     flex-direction: row;
   }
+
+  div#about-img {
+    width: 80%;
+    height: 100%;
+  }
+}
+
+div#about-img {
+  width: 100%;
+  height: 80%;
+  text-align: center;
 }
 
 div#about-img > img {
