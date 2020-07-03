@@ -53,6 +53,14 @@ nav p.active {
 main {
 }
 
+main div {
+  display: none;
+}
+
+main div.active {
+  display: block;
+}
+
 footer {
   background-color: var(--gray);
   color: var(--white);
