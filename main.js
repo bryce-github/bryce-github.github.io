@@ -15,7 +15,7 @@ function setActiveNav( navElement ) {
   activeMainElement.classList.add('active');
 }
 
-for ( i = 0; i < allNavElements.length; i++ ) {
+for ( let i = 0; i < allNavElements.length; i++ ) {
   navElement = allNavElements[i];
   if ( navElement.classList.contains( 'active' ) ) {
     setActiveNav( navElement );
