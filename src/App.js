@@ -8,8 +8,8 @@ import {
 import { Navbar, Nav } from "react-bootstrap";
 import "./App.scss"
 
-import Home from "./Home"
-const About = React.lazy(() => import('./About'));
+import Home from "./home/Home"
+const About = React.lazy(() => import('./about/About'));
 const Blog = React.lazy(() => import('./blog/Blog'));
 
 export default function App() {
@@ -24,24 +24,27 @@ export default function App() {
 
   return (
     <Router>
-      <Navbar sticky="top" bg="white" className={cls}>
-        <Navbar.Brand>
-          Bryce Anglin
-        </Navbar.Brand>
-        <Nav className="ml-auto">
-          <Nav.Link as={Link} to="/">Home</Nav.Link>
-          <Nav.Link as={Link} to="/about">About</Nav.Link>
-          <Nav.Link as={Link} to="/blog">Blog</Nav.Link>
-        </Nav>
+      <Navbar collapseOnSelect expand="sm" fixed="top" bg="white" className={cls}>
+        <Navbar.Brand>Bryce Anglin</Navbar.Brand>
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Collapse id="responsive-navbar-nav">
+          <Nav className="ml-auto">
+            <Nav.Link eventKey="1" as={Link} to="/">Home</Nav.Link>
+            <Nav.Link eventKey="2" as={Link} to="/about">About</Nav.Link>
+            <Nav.Link eventKey="3" as={Link} to="/blog">Blog</Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
       </Navbar>
         <Switch>
           <Route path="/about">
             <Suspense fallback={<div>Loading...</div>}>
+              <div className="p-4 m-1"></div>
               <About />
             </Suspense>
           </Route>
           <Route path="/blog">
             <Suspense fallback={<div>Loading...</div>}>
+              <div className="p-4 m-1"></div>
               <Blog />
             </Suspense>
           </Route>

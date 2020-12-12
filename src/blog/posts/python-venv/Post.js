@@ -1,7 +1,7 @@
 import '../Post.scss';
 import Python from './python.png'
 import PythonPackage from './PythonPackage.png'
-import { Image, Alert } from 'react-bootstrap';
+import { Image, Alert, Row, Col } from 'react-bootstrap';
 
 const info = {
   name: "Python Virtual Environments",
@@ -30,7 +30,7 @@ export default function Post() {
         Let's start with taking a look at how Python works on its own. When you first
         install Python, it looks a bit like this.
       </p>
-      <Image src={Python} alt="Python" className="mx-auto d-block" />
+      <Image fluid src={Python} alt="Python" className="mx-auto d-block" />
       <p>
         Two scripts inside are <code>python.exe</code> and <code>pip.exe</code>.
         These are called when you type <code>python</code> and <code>pip</code> in the
@@ -38,7 +38,7 @@ export default function Post() {
         Let's install that package into our Python environment using <code>pip 
         install some-package</code>. Now our environment looks like this.
       </p>
-      <Image src={PythonPackage} alt="Python Package" className="mx-auto d-block" />
+      <Image fluid src={PythonPackage} alt="Python Package" className="mx-auto d-block" />
       <p>
         Great! Now we can import that package in our Python code. Now let's consider 
         two situations:

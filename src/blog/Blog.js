@@ -1,5 +1,5 @@
 import React, { Suspense } from 'react';
-import { Container, Row, Col, Card } from 'react-bootstrap';
+import { Container, Row, Col, Card, Badge } from 'react-bootstrap';
 import {
   Switch,
   Route,
@@ -38,7 +38,7 @@ export default function Blog() {
   let match = useRouteMatch();
 
   return (
-    <Container fluid>
+    <Container>
       <Switch>
         <Route path={`${match.path}/:postId`}>
           <Suspense fallback={<div>Loading...</div>}>
