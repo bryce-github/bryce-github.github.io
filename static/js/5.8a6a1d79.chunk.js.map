@@ -1,0 +1,1 @@
+{"version":3,"sources":["About.js"],"names":["About"],"mappings":"6JAAe,SAASA,IACtB,OAAO","file":"static/js/5.8a6a1d79.chunk.js","sourcesContent":["export default function About() {\r\n  return <h2>About</h2>;\r\n}"],"sourceRoot":""}

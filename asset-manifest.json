@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/bryceanglin.github.io/static/css/main.c72e02da.chunk.css",
+    "main.js": "/bryceanglin.github.io/static/js/main.3cde4d20.chunk.js",
+    "main.js.map": "/bryceanglin.github.io/static/js/main.3cde4d20.chunk.js.map",
+    "runtime-main.js": "/bryceanglin.github.io/static/js/runtime-main.f765326c.js",
+    "runtime-main.js.map": "/bryceanglin.github.io/static/js/runtime-main.f765326c.js.map",
+    "static/js/2.0d7e4ea7.chunk.js": "/bryceanglin.github.io/static/js/2.0d7e4ea7.chunk.js",
+    "static/js/2.0d7e4ea7.chunk.js.map": "/bryceanglin.github.io/static/js/2.0d7e4ea7.chunk.js.map",
+    "static/css/3.1227b20a.chunk.css": "/bryceanglin.github.io/static/css/3.1227b20a.chunk.css",
+    "static/js/3.c2a731f2.chunk.js": "/bryceanglin.github.io/static/js/3.c2a731f2.chunk.js",
+    "static/js/3.c2a731f2.chunk.js.map": "/bryceanglin.github.io/static/js/3.c2a731f2.chunk.js.map",
+    "static/css/4.0dba887b.chunk.css": "/bryceanglin.github.io/static/css/4.0dba887b.chunk.css",
+    "static/js/4.2382948d.chunk.js": "/bryceanglin.github.io/static/js/4.2382948d.chunk.js",
+    "static/js/4.2382948d.chunk.js.map": "/bryceanglin.github.io/static/js/4.2382948d.chunk.js.map",
+    "static/js/5.8a6a1d79.chunk.js": "/bryceanglin.github.io/static/js/5.8a6a1d79.chunk.js",
+    "static/js/5.8a6a1d79.chunk.js.map": "/bryceanglin.github.io/static/js/5.8a6a1d79.chunk.js.map",
+    "static/js/6.1d8791b8.chunk.js": "/bryceanglin.github.io/static/js/6.1d8791b8.chunk.js",
+    "static/js/6.1d8791b8.chunk.js.map": "/bryceanglin.github.io/static/js/6.1d8791b8.chunk.js.map",
+    "index.html": "/bryceanglin.github.io/index.html",
+    "static/css/3.1227b20a.chunk.css.map": "/bryceanglin.github.io/static/css/3.1227b20a.chunk.css.map",
+    "static/css/4.0dba887b.chunk.css.map": "/bryceanglin.github.io/static/css/4.0dba887b.chunk.css.map",
+    "static/css/main.c72e02da.chunk.css.map": "/bryceanglin.github.io/static/css/main.c72e02da.chunk.css.map",
+    "static/js/2.0d7e4ea7.chunk.js.LICENSE.txt": "/bryceanglin.github.io/static/js/2.0d7e4ea7.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f765326c.js",
+    "static/js/2.0d7e4ea7.chunk.js",
+    "static/css/main.c72e02da.chunk.css",
+    "static/js/main.3cde4d20.chunk.js"
+  ]
+}
