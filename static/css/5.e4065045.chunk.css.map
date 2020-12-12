@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://src/about/About.scss"],"names":[],"mappings":"AAAA,0BACI,eAAgB","file":"5.e4065045.chunk.css","sourcesContent":[".vertical-timeline::before {\r\n    background: #bbb;\r\n}"]}
