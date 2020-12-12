@@ -1,0 +1,27 @@
+.Postcard {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  color: #000;
+  padding: 1em;
+  h2 {
+    color: #000;
+  }
+  .description {
+    color: #555;
+  }
+  .dateText {
+    font-size: 0.8em;
+    color: #555;
+  }
+  ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    li {
+      font-size: 0.8em;
+      color: #555;
+    }
+  }
+}
+
