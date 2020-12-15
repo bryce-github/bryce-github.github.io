@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Container, Row, Col, Image, Button } from "react-bootstrap";
 import Avatar from "./avatar-removebg.png";
 import {
@@ -6,6 +7,10 @@ import {
 import "./Home.scss";
 
 export default function Home() {
+  
+  const [imageLoaded, loadImage] = useState(false);
+  const imageStyle = imageLoaded ? {} : {visibility: 'hidden'};
+
   return (
     <Container className="home">
       <Row className="pt-6 align-items-bottom h-100">
@@ -17,7 +22,7 @@ export default function Home() {
           </Link>
         </Col>
         <Col xs={12} lg={6} className="h-100 overflow-hidden">
-          <Image fluid src={Avatar}/>
+          <Image fluid src={Avatar} style={imageStyle} onLoad={() => loadImage(true)} />
         </Col>
       </Row>
     </Container>

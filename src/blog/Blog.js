@@ -1,5 +1,6 @@
 import React, { Suspense } from 'react';
 import { Container, Row, Col, Card, Badge } from 'react-bootstrap';
+import Fade from 'react-reveal/Fade';
 import {
   Switch,
   Route,
@@ -21,24 +22,24 @@ const posts = {
       to start using them today.`,
     article: React.lazy(() => import('./posts/python-venv/Post'))
   },
-  // 'python-import': {
-  //   name: "How Python Imports Packages",
-  //   date: "Dec 12 2020",
-  //   tags: ["python"],
-  //   description: 
-  //     `Understanding the import system in Python can be confusing at times, especially
-  //     when you're running into unexpected import errors. In this post, we'll take a 
-  //     look into how the import system works and discuss different ways you might
-  //     want to import some Python code.`,
-  //   article: React.lazy(() => import('./posts/python-import/Post'))
-  // },
+  'python-import': {
+    name: "How Python Imports Packages",
+    date: "Dec 12 2020",
+    tags: ["python"],
+    description: 
+      `Understanding the import system in Python can be confusing at times, especially
+      when you're running into unexpected import errors. In this post, we'll take a 
+      look into how the import system works and discuss different ways you might
+      want to import some Python code.`,
+    article: React.lazy(() => import('./posts/python-import/Post'))
+  },
 };
 
 export default function Blog() {
   let match = useRouteMatch();
 
   return (
-    <Container>
+    <Container className="Blog">
       <Switch>
         <Route path={`${match.path}/:postId`}>
           <Suspense fallback={<div>Loading...</div>}>
@@ -51,34 +52,38 @@ export default function Blog() {
               <h3>Posts</h3>
             </Col>
           </Row>
-          {Object.keys(posts).map((key) => {
-            return (
-              <Row key={key} className='mb-3'>
-                <Col>
-                  <Card>
-                    <Card.Body>
-                      <Link to={`${match.url}/${key}`}>
-                        <Card.Title>
-                          {posts[key].name}
-                        </Card.Title>
-                      </Link>
-                      <Card.Subtitle>
-                        {posts[key].date}
-                      </Card.Subtitle>
-                      <Card.Text>
-                        {posts[key].description}
-                      </Card.Text>
-                    </Card.Body>
-                    <Card.Footer>
-                      {posts[key].tags.map((tag) => {
-                        return <small key={tag} className="text-muted">#{tag}</small>
-                      })}
-                    </Card.Footer>
-                  </Card>
-                </Col>
-              </Row>
-            )
-          })}
+          <Fade right cascade duration="500">
+            <div>
+              {Object.keys(posts).map((key) => {
+                return (
+                  <Row key={key} className='mb-3'>
+                    <Col>
+                      <Card>
+                        <Card.Body>
+                          <Link to={`${match.url}/${key}`}>
+                            <Card.Title>
+                              {posts[key].name}
+                            </Card.Title>
+                          </Link>
+                          <Card.Subtitle>
+                            {posts[key].date}
+                          </Card.Subtitle>
+                          <Card.Text>
+                            {posts[key].description}
+                          </Card.Text>
+                        </Card.Body>
+                        <Card.Footer>
+                          {posts[key].tags.map((tag) => {
+                            return <small key={tag} className="text-muted">#{tag}</small>
+                          })}
+                        </Card.Footer>
+                      </Card>
+                    </Col>
+                  </Row>
+                )
+              })}
+            </div>
+          </Fade>
         </Route>
       </Switch>
     </Container>
