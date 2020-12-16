@@ -1,3 +1,43 @@
 .vertical-timeline::before {
-    background: #bbb;
+  background: rgba(0,0,0,0.125);
+}
+
+.logo {
+  &.py div {
+    background: #306998;
+  }
+  &.js div {
+    background: #F0DB4F;
+  }
+  &.db div {
+    background: #2E8B57;
+  }
+  &.other div {
+    background: #FA8072;
+  }
+  div {
+    border-radius: 2.5em;
+    width: 5em;
+    height: 5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    svg {
+      color: #fff;
+      width: 2em;
+      height: 2em;
+    }
+  }
+}
+
+.child-h-100 {
+  > div {
+    height: 100% !important;
+  }
+}
+
+@media (min-width: 1170px) {
+  .timeline-header {
+    text-align: center !important;
+  }
 }

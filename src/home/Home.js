@@ -1,10 +1,11 @@
 import { useState } from 'react';
 import { Container, Row, Col, Image, Button } from "react-bootstrap";
-import Avatar from "./avatar-removebg.png";
+import Avatar from "./avatar-removebg-min.png";
 import {
   Link
 } from "react-router-dom";
 import "./Home.scss";
+import Fade from 'react-reveal/Fade';
 
 export default function Home() {
   
@@ -22,7 +23,9 @@ export default function Home() {
           </Link>
         </Col>
         <Col xs={12} lg={6} className="h-100 overflow-hidden">
-          <Image fluid src={Avatar} style={imageStyle} onLoad={() => loadImage(true)} />
+          <Fade right distance="12px">
+            <Image fluid src={Avatar} style={imageStyle} onLoad={() => loadImage(true)} />
+          </Fade>
         </Col>
       </Row>
     </Container>

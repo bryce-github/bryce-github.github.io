@@ -1,5 +1,5 @@
 import React, { Suspense } from 'react';
-import { Container, Row, Col, Card, Badge } from 'react-bootstrap';
+import { Container, Row, Col, Card } from 'react-bootstrap';
 import Fade from 'react-reveal/Fade';
 import {
   Switch,
@@ -22,17 +22,17 @@ const posts = {
       to start using them today.`,
     article: React.lazy(() => import('./posts/python-venv/Post'))
   },
-  'python-import': {
-    name: "How Python Imports Packages",
-    date: "Dec 12 2020",
-    tags: ["python"],
-    description: 
-      `Understanding the import system in Python can be confusing at times, especially
-      when you're running into unexpected import errors. In this post, we'll take a 
-      look into how the import system works and discuss different ways you might
-      want to import some Python code.`,
-    article: React.lazy(() => import('./posts/python-import/Post'))
-  },
+  // 'python-import': {
+  //   name: "How Python Imports Packages",
+  //   date: "Dec 12 2020",
+  //   tags: ["python"],
+  //   description: 
+  //     `Understanding the import system in Python can be confusing at times, especially
+  //     when you're running into unexpected import errors. In this post, we'll take a 
+  //     look into how the import system works and discuss different ways you might
+  //     want to import some Python code.`,
+  //   article: React.lazy(() => import('./posts/python-import/Post'))
+  // },
 };
 
 export default function Blog() {

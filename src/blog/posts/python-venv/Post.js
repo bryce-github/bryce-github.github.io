@@ -1,7 +1,7 @@
 import '../Post.scss';
 import Python from './python.png'
 import PythonPackage from './PythonPackage.png'
-import { Image, Alert, Row, Col } from 'react-bootstrap';
+import { Image, Alert } from 'react-bootstrap';
 
 const info = {
   name: "Python Virtual Environments",
