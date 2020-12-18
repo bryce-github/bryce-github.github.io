@@ -11,6 +11,30 @@ import {
 import "./Blog.scss";
 
 const posts = {
+  'python-units-1': {
+    name: "Physical Units in Python: Part 1 - Emulating Python Primitives",
+    date: "Dec 17 2020",
+    tags: ["python"],
+    description: 
+      `One problem that comes up when using computer programming to solve 
+      physics problems is handling physical units like distance or time. 
+      In this series, we'll look at developing a flexible framework for 
+      handling units in Python. Part 1 of this series will take a look
+      at some prerequisite Python knowledge that will be useful when 
+      creating something that acts like a primitive Python type.`,
+    article: React.lazy(() => import('./posts/python-units-1/Post'))
+  },
+  'python-import': {
+    name: "How Python Imports Packages",
+    date: "Dec 12 2020",
+    tags: ["python"],
+    description: 
+    `Understanding the import system in Python can be confusing at times, especially
+    when you're running into unexpected import errors. In this post, we'll take a 
+    brief look into the python import system and provide the knowledge you need
+    to fix that import error.`,
+    article: React.lazy(() => import('./posts/python-import/Post'))
+  },
   'python-venv': {
     name: "Python Virtual Environments",
     date: "Dec 11 2020",
@@ -22,17 +46,6 @@ const posts = {
       to start using them today.`,
     article: React.lazy(() => import('./posts/python-venv/Post'))
   },
-  // 'python-import': {
-  //   name: "How Python Imports Packages",
-  //   date: "Dec 12 2020",
-  //   tags: ["python"],
-  //   description: 
-  //     `Understanding the import system in Python can be confusing at times, especially
-  //     when you're running into unexpected import errors. In this post, we'll take a 
-  //     look into how the import system works and discuss different ways you might
-  //     want to import some Python code.`,
-  //   article: React.lazy(() => import('./posts/python-import/Post'))
-  // },
 };
 
 export default function Blog() {
