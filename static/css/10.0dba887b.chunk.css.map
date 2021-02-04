@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://src/blog/posts/Post.scss"],"names":[],"mappings":"AAAA,UACE,cAAgB,CAChB,UAAW","file":"10.0dba887b.chunk.css","sourcesContent":[".dateText {\r\n  font-size: 0.8em;\r\n  color: #555;\r\n}"]}
